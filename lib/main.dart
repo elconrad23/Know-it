@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
-
+import 'screens/job_questions.dart';
+import 'screens/health_questions.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -97,20 +98,19 @@ class _MyAppState extends State<MyApp> {
                   )
                 ],
               )),
-          Container(
-            child: Text(
-              result,
-              style: const TextStyle(
-                  decoration: TextDecoration.none,
-                  fontSize: 50,
-                  color: Colors.blue),
-            ),
+          Text(
+            result,
+            style: const TextStyle(
+                decoration: TextDecoration.none,
+                fontSize: 50,
+                color: Colors.blue),
           ),
           TextButton(
             onPressed: () {
               rotateWheel();
             },
-            child: Text("Press here"),
+            //displays either job or health questions
+            child: const Text("Category to play"),
           )
         ],
       ),
